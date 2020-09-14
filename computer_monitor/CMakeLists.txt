@@ -12,10 +12,10 @@ endif()
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 catkin_package(
-    DEPENDS roscpp std_msgs
-    CATKIN_DEPENDS # TODO
-    INCLUDE_DIRS # TODO include
-    LIBRARIES network_detector# TODO
+    DEPENDS std_msgs
+    CATKIN_DEPENDS
+    INCLUDE_DIRS
+    LIBRARIES network_detector
 )
 
 
