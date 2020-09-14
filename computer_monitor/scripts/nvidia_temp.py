@@ -37,9 +37,6 @@
 
 from __future__ import with_statement, division
 
-PKG = 'computer_monitor'
-import roslib; roslib.load_manifest(PKG)
-
 import rospy
 
 from diagnostic_msgs.msg import DiagnosticArray, DiagnosticStatus
