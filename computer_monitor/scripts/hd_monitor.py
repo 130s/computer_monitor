@@ -36,7 +36,7 @@
 
 from __future__ import with_statement
 import roslib
-roslib.load_manifest('pr2_computer_monitor')
+roslib.load_manifest('computer_monitor')
 
 import rospy
 

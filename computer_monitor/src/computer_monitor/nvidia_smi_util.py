@@ -36,13 +36,13 @@
 
 from __future__ import division
 
-PKG = 'pr2_computer_monitor'
+PKG = 'computer_monitor'
 import roslib; roslib.load_manifest(PKG)
 
 import rospy
 
 from diagnostic_msgs.msg import DiagnosticArray, DiagnosticStatus, KeyValue
-from pr2_msgs.msg import GPUStatus
+from computer_status_msgs.msg import GPUStatus
 
 import subprocess
 import math

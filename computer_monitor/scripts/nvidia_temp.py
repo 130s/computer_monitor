@@ -37,15 +37,15 @@
 
 from __future__ import with_statement, division
 
-PKG = 'pr2_computer_monitor'
+PKG = 'computer_monitor'
 import roslib; roslib.load_manifest(PKG)
 
 import rospy
 
 from diagnostic_msgs.msg import DiagnosticArray, DiagnosticStatus
-from pr2_msgs.msg import GPUStatus
+from computer_status_msgs.msg import GPUStatus
 
-import pr2_computer_monitor
+import computer_monitor
 
 class NVidiaTempMonitor(object):
     def __init__(self):
@@ -56,9 +56,9 @@ class NVidiaTempMonitor(object):
         gpu_stat = GPUStatus()
         stat = DiagnosticStatus()
         try:
-            card_out = pr2_computer_monitor.get_gpu_status()
-            gpu_stat = pr2_computer_monitor.parse_smi_output(card_out)
-            stat = pr2_computer_monitor.gpu_status_to_diag(gpu_stat)
+            card_out = computer_monitor.get_gpu_status()
+            gpu_stat = computer_monitor.parse_smi_output(card_out)
+            stat = computer_monitor.gpu_status_to_diag(gpu_stat)
         except Exception, e:
             import traceback
             rospy.logerr('Unable to process nVidia GPU data')
